@@ -6,7 +6,9 @@ namespace EH_GC_AHBC_2020_Repo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("enter a string");
+            string userinput = Console.ReadLine();
+            Console.WriteLine(userinput);
         }
     }
 }
