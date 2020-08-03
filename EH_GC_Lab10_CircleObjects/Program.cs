@@ -30,15 +30,17 @@ namespace EH_GC_Lab10_CircleObjects
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("On No! Invalid entry. Would you like to try again?(y/n)");
+                    Console.WriteLine("Oh No! Invalid entry. Would you like to try again?(y/n)");
                 }
 
 
                 UserContinue();
-                int TotalCircles = CircleTotal.Count;
-                Console.WriteLine($"Goodbye. You created {TotalCircles} circle objects.");
+
 
             }
+            int TotalCircles = CircleTotal.Count;
+            Console.WriteLine($"Goodbye. You created {TotalCircles} circle objects.");
+            return;
         }
         private static void UserContinue()
         {
