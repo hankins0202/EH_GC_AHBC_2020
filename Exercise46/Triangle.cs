@@ -25,7 +25,7 @@ namespace Exercise46
             //int s = (Side1Length + Side2Length + Side3Length) / 2;
             var s = CalculatePerimeter() / 2; //s is semiPerimeter
             
-            var area = (int)Math.Sqrt(s*(s-Side1Length)*(s-Side2Length)*(s-Side3Length));
+            var area = (int)Math.Round(Math.Sqrt(s*(s-Side1Length)*(s-Side2Length)*(s-Side3Length)));
             return area; 
         }
 

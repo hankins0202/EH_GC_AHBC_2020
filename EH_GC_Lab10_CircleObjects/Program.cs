@@ -17,11 +17,13 @@ namespace EH_GC_Lab10_CircleObjects
             {
                 try
                 {
-                    
                     Console.WriteLine("Enter radius: ");
                     double userInput = double.Parse(Console.ReadLine());
 
                     Circle circle = new Circle(userInput);
+                    Validator validator = new Validator(1);
+                    validator.CalculateFormattedArea();
+                    validator.CalculateFormattedCircumference();
 
                     CircleTotal.Add(userInput);
                     Console.WriteLine($"Circumference: {circle.CalculateFormattedCircumference()}");
@@ -32,10 +34,7 @@ namespace EH_GC_Lab10_CircleObjects
                 {
                     Console.WriteLine("Oh No! Invalid entry. Would you like to try again?(y/n)");
                 }
-
-
                 UserContinue();
-
 
             }
             int TotalCircles = CircleTotal.Count;
@@ -56,14 +55,6 @@ namespace EH_GC_Lab10_CircleObjects
             {
                 UserContinueSelection = false;
             }
-
-        }
-
-
-        public static int CountCircleObjects(string count)
-        {
-            return int.Parse(count)+1;
-
         }
     }
 }

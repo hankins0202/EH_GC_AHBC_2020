@@ -32,5 +32,7 @@ namespace EH_GC_Lab10_CircleObjects
         {
             return Math.Round(x, 2).ToString();
         }
+
+
     }
 }

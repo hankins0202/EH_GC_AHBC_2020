@@ -12,7 +12,7 @@ namespace Week4Day2OOP
         public Sedan (string make, string model)
         {
             Make = make;
-            Model = Model;
+            Model = model;
         }
 
         public override void Build()
