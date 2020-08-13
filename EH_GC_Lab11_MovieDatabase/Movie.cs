@@ -63,9 +63,9 @@ namespace EH_GC_Lab11_MovieDatabase
             Console.WriteLine("Enter the number for the category of the new movie.");
             string NewMovieCategory = Console.ReadLine();
             MovieType movieCat = (MovieType)Enum.Parse(typeof(MovieType), NewMovieCategory); ;//converting string input to enum output
-            ListOfMovies NewMovie = new ListOfMovies(NewMovieTitle, movieCat.ToString());
+            ListOfMovies AddNewMovie = new ListOfMovies(NewMovieTitle, movieCat.ToString());
 
-            NewMovie.MovieList.Add(NewMovie);
+            AddNewMovie.MovieList.Add(AddNewMovie);
 
             Console.WriteLine("Movie has been added");
         }

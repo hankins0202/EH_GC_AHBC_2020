@@ -17,7 +17,7 @@ namespace W5D3_Enums
         private static void UserShuffleDeck()
         {
             Random random = new Random();
-            Suit suitNum = (Suit)random.Next(4);
+            Suit suitNum = (Suit)random.Next(4); //Casting. (suit) takes in the random number and converts it to the item assoicated with the number.
             Rank rankNum = (Rank)random.Next(12);
 
             Console.WriteLine($"Shuffling...You drew a {rankNum} of {suitNum}.");

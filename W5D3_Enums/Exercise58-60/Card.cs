@@ -13,6 +13,5 @@ namespace W5D3_Enums.Exercise5860
         //    Rank = (Rank)rank;
         //    Suit = (Suit)suit;
         //}
-
     }
 }
