@@ -1,10 +1,10 @@
 ﻿using System;
 namespace W6D2_Lab13
 {
-    public class Player
+    public interface IPlayer
     {
-        public Player()
-        {
-        }
+        public string Name { get; set; }
+
+        public RPS GenerateRPS(RPS userChoice = RPS.paper);       
     }
 }
