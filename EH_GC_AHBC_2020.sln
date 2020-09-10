@@ -63,6 +63,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W10D2_AssessmentReview", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W10D3_TDDExample_FizzBuzz", "W10D3_TDDExample_FizzBuzz\W10D3_TDDExample_FizzBuzz.csproj", "{0F00A5AE-C8FB-4D09-87E4-24F62DAFA6F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "W10D3", "W10D3", "{0FAE77EC-0C64-445C-9F5E-B85EEBBEBEAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W10D3_TDDExample_FizzBuzzTest", "W10D3_TDDExample_FizzBuzzTest\W10D3_TDDExample_FizzBuzzTest.csproj", "{899566F3-4A68-4A2B-B752-A91A89450862}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,11 +193,19 @@ Global
 		{0F00A5AE-C8FB-4D09-87E4-24F62DAFA6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F00A5AE-C8FB-4D09-87E4-24F62DAFA6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F00A5AE-C8FB-4D09-87E4-24F62DAFA6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{899566F3-4A68-4A2B-B752-A91A89450862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{899566F3-4A68-4A2B-B752-A91A89450862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{899566F3-4A68-4A2B-B752-A91A89450862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{899566F3-4A68-4A2B-B752-A91A89450862}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A0924FD7-11D2-4C1C-8589-62D8EBA5EB02}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F00A5AE-C8FB-4D09-87E4-24F62DAFA6F7} = {0FAE77EC-0C64-445C-9F5E-B85EEBBEBEAC}
+		{899566F3-4A68-4A2B-B752-A91A89450862} = {0FAE77EC-0C64-445C-9F5E-B85EEBBEBEAC}
 	EndGlobalSection
 EndGlobal
