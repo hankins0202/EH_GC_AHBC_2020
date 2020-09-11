@@ -20,7 +20,7 @@ namespace W10D3_TDDExercise
 
         public int Division(int input1, int input2)
         {
-            throw new NotImplementedException();
+            return input1 / input2;
         }
     }
 }
