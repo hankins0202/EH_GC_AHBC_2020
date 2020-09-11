@@ -35,5 +35,20 @@ namespace W10D3_TDDExample_FizzBuzzTest
             //Assert
             Assert.Equal(expectedResult, result);
         }
+        [Fact]
+        public void ShouldReturnFizzBuzzForMultiplesOfThreesAndFives()
+        {
+            //Arrange
+            var input = 15;
+            var expectedResult = "FizzBuzz";
+            FizzBuzz fizzBuzz = new FizzBuzz();
+
+            //Act
+            string result = fizzBuzz.Generate(input);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+
+        }
     }
 }
