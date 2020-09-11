@@ -15,7 +15,7 @@ namespace W10D3_TDDExercise
 
         public int Multiplication(int input1, int input2)
         {
-            throw new NotImplementedException();
+            return input1 * input2;
         }
     }
 }
