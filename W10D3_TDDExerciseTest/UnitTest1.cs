@@ -12,10 +12,8 @@ namespace W10D3_TDDExerciseCalculatorTest
             //Arrange
             int input1 = 3;
             int input2 = 5;
-
-            Calculator calculator = new Calculator();
-            
             int expectedResult = 8;
+            Calculator calculator = new Calculator();
 
             //Act
             int result = calculator.Addition(input1, input2);
@@ -30,13 +28,30 @@ namespace W10D3_TDDExerciseCalculatorTest
             //Arrange
             int input1 = 10;
             int input2 = 3;
+            int expectedResult = 7;
 
             Calculator calculator = new Calculator();
 
-            int expectedResult = 7;
+            
 
             //Act
             int result = calculator.Subtraction(input1, input2);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
+
+        [Fact]
+        public void CalculatorShouldMultiplyNumbersTogether()
+        {
+            //Arrange
+            int input1 = 3;
+            int input2 = 5;
+            int expectedResult = 15;
+            Calculator calculator = new Calculator();
+
+            //Act
+            int result = calculator.Multiplication(input1, input2);
 
             //Assert
             Assert.Equal(expectedResult, result);
