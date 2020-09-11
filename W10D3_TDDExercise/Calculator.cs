@@ -20,7 +20,13 @@ namespace W10D3_TDDExercise
 
         public int Division(int input1, int input2)
         {
+            if(input2 == 0)
+            {
+                throw new Exception();
+            }
             return input1 / input2;
+          
+           
         }
     }
 }

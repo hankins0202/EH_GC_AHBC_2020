@@ -72,5 +72,20 @@ namespace W10D3_TDDExerciseCalculatorTest
             //Assert
             Assert.Equal(expectedResult, result);
         }
+
+        [Fact]
+        public void CalculatorShouldThrowExceptionWhenDividingByZero()
+        {
+            //Arrange
+            int input1 = 8;
+            int input2 = 0;
+            Calculator calculator = new Calculator();
+
+            //Act
+            //int result = calculator.Division(input1, input2);
+
+            //Assert
+            Assert.Throws<Exception>(() => calculator.Division(input1,input2));
+        }
     }
 }
