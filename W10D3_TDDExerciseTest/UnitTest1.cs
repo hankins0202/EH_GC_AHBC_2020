@@ -56,5 +56,21 @@ namespace W10D3_TDDExerciseCalculatorTest
             //Assert
             Assert.Equal(expectedResult, result);
         }
+
+        [Fact]
+        public void CalculatorShouldDivideNumbersTogether()
+        {
+            //Arrange
+            int input1 = 15;
+            int input2 = 3;
+            int expectedResult = 5;
+            Calculator calculator = new Calculator();
+
+            //Act
+            int result = calculator.Division(input1, input2);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }

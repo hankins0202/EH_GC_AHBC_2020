@@ -17,5 +17,10 @@ namespace W10D3_TDDExercise
         {
             return input1 * input2;
         }
+
+        public int Division(int input1, int input2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
