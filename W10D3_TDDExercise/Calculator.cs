@@ -5,12 +5,12 @@ namespace W10D3_TDDExercise
     {
         public int Addition(int input1, int input2)
         {
-            throw new Exception();
+            return input2 + input1;
         }
 
         public int Subtraction(int input1, int input2)
         {
-            throw new NotImplementedException();
+            return input1 - input2;
         }
     }
 }
