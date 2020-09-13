@@ -25,8 +25,6 @@ namespace W10D3_TDDExercise
                 throw new Exception();
             }
             return input1 / input2;
-          
-           
         }
     }
 }
