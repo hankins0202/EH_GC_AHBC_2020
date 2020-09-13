@@ -12,8 +12,10 @@ namespace ROSHAMBO
                 case RPS.Paper:
                     if (input1.Equals(RPS.Rock))
                         result = RPS.Paper;
+                    else if (input1.Equals(RPS.Scissors))
+                        result = RPS.Scissors;
                     else
-                        result =  RPS.Scissors;
+                        result = RPS.Tie;
                     break;
                 case RPS.Rock:
                     if (input1.Equals(RPS.Scissors))
