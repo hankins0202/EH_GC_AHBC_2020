@@ -23,7 +23,7 @@ namespace ROSHAMBOTests
             Assert.Equal(expectedResult, result);
         }
         [Fact]
-        public void ScissorsBeatsPaper()
+        public void ScissorsBeatsPaperTest()
         {
             //Arrange
             var inputService = new InputService();

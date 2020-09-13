@@ -6,10 +6,12 @@ namespace ROSHAMBO
 
         public RPS Play(RPS input, RPS input1)
         {
-            if (input.Equals(RPS.Paper))
+            if (input.Equals(RPS.Paper) && input1.Equals(RPS.Rock))
                 return RPS.Paper;
-            else
+            else if (input1.Equals(RPS.Scissors))
                 return RPS.Scissors;
+            else
+                return RPS.Rock;
         }
     }
 }
