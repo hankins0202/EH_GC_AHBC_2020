@@ -81,5 +81,20 @@ namespace ROSHAMBOTests
             //Assert
             Assert.Equal(expectedResult, result);
         }
+        [Fact]
+        public void PaparLosesToScissorsTest()
+        {
+            //Arrange
+            var inputService = new InputService();
+            RPS input = RPS.Paper;
+            RPS input1 = RPS.Scissors;
+            RPS expectedResult = RPS.Scissors;
+
+            //Act
+            RPS result = inputService.Play(input, input1);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
