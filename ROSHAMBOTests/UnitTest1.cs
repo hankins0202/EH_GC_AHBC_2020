@@ -82,13 +82,28 @@ namespace ROSHAMBOTests
             Assert.Equal(expectedResult, result);
         }
         [Fact]
-        public void PaparLosesToScissorsTest()
+        public void PaperLosesToScissorsTest()
         {
             //Arrange
             var inputService = new InputService();
             RPS input = RPS.Paper;
             RPS input1 = RPS.Scissors;
             RPS expectedResult = RPS.Scissors;
+
+            //Act
+            RPS result = inputService.Play(input, input1);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
+        [Fact]
+        public void PaperTieTest()
+        {
+            //Arrange
+            var inputService = new InputService();
+            RPS input = RPS.Paper;
+            RPS input1 = RPS.Paper;
+            RPS expectedResult = RPS.Tie;
 
             //Act
             RPS result = inputService.Play(input, input1);

@@ -6,6 +6,6 @@ namespace ROSHAMBO
         Rock,
         Paper,
         Scissors,
-        Inconclusive,
+        Tie,
     }
 }
