@@ -8,10 +8,10 @@ namespace ROSHAMBO
         {
             if (input.Equals(RPS.Paper) && input1.Equals(RPS.Rock))
                 return RPS.Paper;
-            else if (input1.Equals(RPS.Scissors))
-                return RPS.Scissors;
-            else
+            else if (input.Equals(RPS.Rock) && input1.Equals(RPS.Scissors))
                 return RPS.Rock;
+            else 
+                return RPS.Inconclusive;
         }
     }
 }
