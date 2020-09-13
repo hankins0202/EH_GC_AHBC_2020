@@ -51,5 +51,20 @@ namespace ROSHAMBOTests
             //Assert
             Assert.Equal(expectedResult, result);
         }
+        [Fact]
+        public void RockLosesToPaperTest()
+        {
+            //Arrange
+            var inputService = new InputService();
+            RPS input = RPS.Rock;
+            RPS input2 = RPS.Paper;
+            RPS expectedResult = RPS.Paper;
+
+            //Act
+            RPS result = inputService.Play(input, input2);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
