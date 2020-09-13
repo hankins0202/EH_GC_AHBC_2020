@@ -3,13 +3,13 @@ namespace ROSHAMBO
 {
     public class InputService
     {
-        public InputService()
-        {
-        }
 
         public string Play(string input, string input2)
         {
-            throw new NotImplementedException();
+            if (input.Equals("Rock") && input2.Equals("Paper"))
+                return "Paper";
+            else
+                return "Error";
         }
     }
 }
