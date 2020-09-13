@@ -27,11 +27,11 @@ namespace ROSHAMBOTests
             //Arrange
             var inputService = new InputService();
             RPS input = RPS.Rock;
-            RPS input2 = RPS.Scissors;
+            RPS input1 = RPS.Scissors;
             RPS expectedResult = RPS.Rock;
 
             //Act
-            RPS result = inputService.Play(input, input2);
+            RPS result = inputService.Play(input, input1);
 
             //Assert
             Assert.Equal(expectedResult, result);
@@ -42,11 +42,11 @@ namespace ROSHAMBOTests
             //Arrange
             var inputService = new InputService();
             RPS input = RPS.Scissors;
-            RPS input2 = RPS.Paper;
+            RPS input1 = RPS.Paper;
             RPS expectedResult = RPS.Scissors;
 
             //Act
-            RPS result = inputService.Play(input, input2);
+            RPS result = inputService.Play(input, input1);
 
             //Assert
             Assert.Equal(expectedResult, result);
@@ -57,11 +57,11 @@ namespace ROSHAMBOTests
             //Arrange
             var inputService = new InputService();
             RPS input = RPS.Rock;
-            RPS input2 = RPS.Paper;
+            RPS input1 = RPS.Paper;
             RPS expectedResult = RPS.Paper;
 
             //Act
-            RPS result = inputService.Play(input, input2);
+            RPS result = inputService.Play(input, input1);
 
             //Assert
             Assert.Equal(expectedResult, result);
