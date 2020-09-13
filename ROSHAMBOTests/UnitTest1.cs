@@ -7,17 +7,33 @@ namespace ROSHAMBOTests
     public class UnitTest1
     {
         [Fact]
-        public void RockPaperScissorsTests()
+        public void PaperBeatsRockTest()
         {
             //Arrange
             var inputService = new InputService();
-            string input = "Rock";
-            string input2 = "Paper";
-            string expectedResult = "Paper";
+            RPS input = RPS.Paper;
+            RPS input1 = RPS.Rock;
+            RPS expectedResult = RPS.Paper;
 
 
             //Act
-            string result = inputService.Play(input,input2);
+            RPS result = inputService.Play(input,input1);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
+        [Fact]
+        public void ScissorsBeatsPaper()
+        {
+            //Arrange
+            var inputService = new InputService();
+            RPS input = RPS.Paper;
+            RPS input2 = RPS.Scissors;
+            RPS expectedResult = RPS.Scissors;
+
+
+            //Act
+            RPS result = inputService.Play(input, input2);
 
             //Assert
             Assert.Equal(expectedResult, result);

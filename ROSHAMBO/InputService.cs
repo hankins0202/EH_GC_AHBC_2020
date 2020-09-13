@@ -4,12 +4,12 @@ namespace ROSHAMBO
     public class InputService
     {
 
-        public string Play(string input, string input2)
+        public RPS Play(RPS input, RPS input1)
         {
-            if (input.Equals("Rock") && input2.Equals("Paper"))
-                return "Paper";
+            if (input.Equals(RPS.Paper))
+                return RPS.Paper;
             else
-                return "Error";
+                return RPS.Scissors;
         }
     }
 }
