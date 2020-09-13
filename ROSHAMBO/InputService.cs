@@ -10,7 +10,9 @@ namespace ROSHAMBO
                 return RPS.Paper;
             else if (input.Equals(RPS.Rock) && input1.Equals(RPS.Scissors))
                 return RPS.Rock;
-            else 
+            else if (input.Equals(RPS.Scissors) && input1.Equals(RPS.Paper))
+                return RPS.Scissors;
+            else
                 return RPS.Inconclusive;
         }
     }
