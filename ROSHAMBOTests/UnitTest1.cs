@@ -111,5 +111,20 @@ namespace ROSHAMBOTests
             //Assert
             Assert.Equal(expectedResult, result);
         }
+        [Fact]
+        public void ScissorsTieTest()
+        {
+            //Arrange
+            var inputService = new InputService();
+            RPS input = RPS.Scissors;
+            RPS input1 = RPS.Scissors;
+            RPS expectedResult = RPS.Tie;
+
+            //Act
+            RPS result = inputService.Play(input, input1);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
