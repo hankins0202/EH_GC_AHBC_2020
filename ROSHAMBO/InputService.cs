@@ -33,8 +33,16 @@ namespace ROSHAMBO
                     else
                         result = RPS.Tie;
                     break;
+                default:
+                    break;
             }
             return result;
+      
+        }
+
+        public bool ValidateUserInput(string input)
+        {
+            throw new NotImplementedException();
         }
     }
 }
