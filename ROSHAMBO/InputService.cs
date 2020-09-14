@@ -42,7 +42,15 @@ namespace ROSHAMBO
 
         public bool ValidateUserInput(string input)
         {
-            return false;
+           try
+            {
+                int.Parse(input.ToString());
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
