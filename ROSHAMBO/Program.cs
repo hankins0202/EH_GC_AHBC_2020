@@ -10,25 +10,32 @@ namespace ROSHAMBO
             Console.WriteLine("Welcome to ROSHAMBO");
             do
             {
-                bool proceed = false;
-                string input = "";
-                string input1 = "";
+                bool proceed;
+                
                 do
                 {
                     Console.WriteLine("Player 1 choose your weapon. 0. Rock, 1. Paper, or 2. Scissors");
-                    input = Console.ReadLine();
+                    string input = Console.ReadLine();
                     if(inputService.ValidateUserInput(input))
                     {
                         Console.Clear();
                         do
                         {
                             Console.WriteLine("Player 2 choose your weapon. 0. Rock, 1. Paper, or 2. Scissors");
-                            input1 = Console.ReadLine();
+                            string input1 = Console.ReadLine();
                             if (inputService.ValidateUserInput(input1))
                             {
                                 RPS play = inputService.Play((RPS)int.Parse(input), (RPS)int.Parse(input1));
                                 var result = play == RPS.Tie ? "Tie game!" : $"{play} wins!";
-                                Console.WriteLine(result);
+                                var playerWin = int.Parse(input) == (int)play ? " Player 1 wins!" : " Player 2 wins!";
+                                if(play == RPS.Tie)
+                                {
+                                    Console.WriteLine(result);
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"{result}{playerWin}");
+                                }
                                 break;
                             }
                             else

@@ -44,7 +44,7 @@ namespace ROSHAMBO
         {
             try
             {
-                if (int.Parse(input) <= 2)
+                if (int.Parse(input) <= 2 && int.Parse(input) >= 0)
                     return true;
                 else
                     return false;
