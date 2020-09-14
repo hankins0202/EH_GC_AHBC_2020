@@ -42,7 +42,7 @@ namespace ROSHAMBO
 
         public bool ValidateUserInput(string input)
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }

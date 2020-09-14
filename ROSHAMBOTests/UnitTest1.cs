@@ -142,7 +142,7 @@ namespace ROSHAMBOTests
             Assert.Equal(expectedResult, result);
         }
         [Fact]
-        public void ValidateUserInputTest()
+        public void UserInputStringTest()
         {
             //Arrange
             var inputService = new InputService();
