@@ -169,5 +169,19 @@ namespace ROSHAMBOTests
             //Assert
             Assert.Equal(expectedResult, result);
         }
+        [Fact]
+        public void UserInputValid01Or2Test()
+        {
+            //Arrange
+            var inputService = new InputService();
+            string input = "2";
+            bool expectedResult = true;
+
+            //Act
+            bool result = inputService.ValidateUserInput(input);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace ROSHAMBO
            try
             {
                 int.Parse(input.ToString());
+                
                 return true;
             }
             catch
