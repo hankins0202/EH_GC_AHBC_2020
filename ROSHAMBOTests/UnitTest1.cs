@@ -174,8 +174,8 @@ namespace ROSHAMBOTests
         {
             //Arrange
             var inputService = new InputService();
-            string input = "2";
-            bool expectedResult = true;
+            string input = "9";
+            bool expectedResult = false;
 
             //Act
             bool result = inputService.ValidateUserInput(input);
