@@ -155,5 +155,19 @@ namespace ROSHAMBOTests
             //Assert
             Assert.Equal(expectedResult, result);
         }
+        [Fact]
+        public void UserInputIntegerTest()
+        {
+            //Arrange
+            var inputService = new InputService();
+            string input = "9";
+            bool expectedResult = true;
+
+            //Act
+            bool result = inputService.ValidateUserInput(input);
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
