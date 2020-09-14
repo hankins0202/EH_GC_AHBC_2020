@@ -42,11 +42,12 @@ namespace ROSHAMBO
 
         public bool ValidateUserInput(string input)
         {
-           try
+            try
             {
-                int.Parse(input.ToString());
-                
-                return true;
+                if (int.Parse(input) <= 2)
+                    return true;
+                else
+                    return false;
             }
             catch
             {

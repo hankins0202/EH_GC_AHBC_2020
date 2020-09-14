@@ -156,12 +156,12 @@ namespace ROSHAMBOTests
             Assert.Equal(expectedResult, result);
         }
         [Fact]
-        public void UserInputIntegerTest()
+        public void UserInputInValid01Or2Test()
         {
             //Arrange
             var inputService = new InputService();
             string input = "9";
-            bool expectedResult = true;
+            bool expectedResult = false;
 
             //Act
             bool result = inputService.ValidateUserInput(input);
@@ -174,8 +174,8 @@ namespace ROSHAMBOTests
         {
             //Arrange
             var inputService = new InputService();
-            string input = "9";
-            bool expectedResult = false;
+            string input = "2";
+            bool expectedResult = true;
 
             //Act
             bool result = inputService.ValidateUserInput(input);
