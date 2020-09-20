@@ -1,0 +1,28 @@
+.calculator_grid{
+    border-radius: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.calc_display{
+    background-color: darkgray;
+    color: white;
+    text-align: right;
+    font-size: medium;
+}
+
+.calc_buttons{
+    background-color: lightgray;
+    position: relative;
+    text-align: center;
+    grid-template-columns: repeat(4);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.operator{
+    background-color: #ed6334;
+}

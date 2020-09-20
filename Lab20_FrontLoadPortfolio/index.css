@@ -1,0 +1,78 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #EEF0F2;
+    position: fixed;
+    top: 5em;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #3E3F3B;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #0D034F
+  }
+  body{
+    
+    padding-top: 10em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.container{
+  background-color: #0D034F;
+  color: #EEF0F2;
+  margin-top: 0em;
+  margin-bottom: .5em;
+  padding: 2em;
+
+  
+}
+h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 650;
+  top: 0;
+  position: fixed;
+  color: #0D034F;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+section{
+top:0em;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0D034F;
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.project{
+  padding-right: 0%;
+  width:250px
+}
+.contact{
+
+  color: #0D034F;
+  text-align: center;
+}
