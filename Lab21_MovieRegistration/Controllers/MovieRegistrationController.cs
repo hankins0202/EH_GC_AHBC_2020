@@ -21,7 +21,6 @@ namespace Lab21_MovieRegistration.Controllers
         [HttpPost]
         public IActionResult Result(MovieRegistrationViewModel model)
         {
-            
             return View(model);
         }
     }
