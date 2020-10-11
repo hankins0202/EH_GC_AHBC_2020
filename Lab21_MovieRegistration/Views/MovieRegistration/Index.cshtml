@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model MovieRegistrationViewModel
+@*this is required to reference model properties*@
+@{ViewData["Title"] = "Movie Registration Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">AHBC .NET Lab 21 Movie Registration</h1>
+    <form asp-action="MovieRegistration">
+        <div class="form-group">
+            <label>ID</label>
+            <input asp-for="@Model.ID" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Title</label>
+            <input asp-for="@Model.Title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Genre</label>
+            <input asp-for="@Model.Genre" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Year</label>
+            <input asp-for="@Model.Year" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Actors</label>
+            <input asp-for="@Model.Actors" class="form-control">
+            <small class="form-text text-muted">Seperate actors with a comma.</small>
+        </div>
+        <div class="form-group">
+            <label>Directors</label>
+            <input asp-for="@Model.Directors" class="form-control">
+            <small class="form-text text-muted">Seperate directors with a comma.</small>
+        </div>
+        <input type="submit" value="Result" class="btn btn-primary"/>
+    </form>
+</div>
+

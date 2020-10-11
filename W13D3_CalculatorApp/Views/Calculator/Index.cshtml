@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model CalculatorViewModel
+
+@*this is required to reference model properties*@
+@{
+    ViewData["Title"] = "Calculator Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">AHBC .NET Calculator App</h1>
+    <p>Let's run some numbers</p>
+
+
+    <div class="form-group">
+        <form asp-action="CalculateResult">
+            <label>Input One</label>
+            <input asp-for="@Model.InputOne" />
+            <label>Input Two</label>
+            <input asp-for="@Model.InputTwo" />
+            <label asp-for="Action" class="control-label"></label>
+            <select asp-for="Action" asp-items="Html.GetEnumSelectList<CalculatorTypeEnums>()" class="form-control"></select>
+
+            <input type="submit" value="Calculate" class="btn btn-outline-primary" />
+
+            @*<button type="button" class="btn btn-primary">Calculate</button>*@
+        </form>
+    </div>
+</div>
+
