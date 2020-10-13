@@ -26,6 +26,7 @@ namespace W13D3_CalculatorApp
         {
             services.AddTransient<ICalculationService, CalculationService>();
             services.AddControllersWithViews();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +48,8 @@ namespace W13D3_CalculatorApp
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

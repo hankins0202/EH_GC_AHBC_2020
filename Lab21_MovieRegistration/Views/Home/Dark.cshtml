@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+    <background style="background-color:darkgray">
+        <div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+            <p>Select between dark view vs standard view.</p>
+        </div>
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <div asp-action="Dark">
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="Dark" id="option2" checked> Dark
+                </label>
+            </div>
+            <div asp-action="Standard">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="Standard" id="option1"> Standard
+                </label>
+            </div>
+        </div>
+    </background>
+
+
+

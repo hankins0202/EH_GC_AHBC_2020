@@ -6,20 +6,29 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Lab21_MovieRegistration.Models;
+using Microsoft.AspNetCore.Http;
+
 
 namespace Lab21_MovieRegistration.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IHttpContextAccessor _httpContext;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IHttpContextAccessor httpContext)
         {
             _logger = logger;
+            _httpContext = httpContext;
         }
 
         public IActionResult Index()
         {
+            return View();
+        }
+        public IActionResult DarkMode(HomeViewModel model)
+        {
+            TempData["DarkMode"] = "Grey";
             return View();
         }
 

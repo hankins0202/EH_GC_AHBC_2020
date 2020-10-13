@@ -2,7 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Select between dark view vs standard view.</p>
+        <button asp-action ="DarkMode" type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+            Single toggle
+        </button>
+        <div class="whatever" style=background-color: @TempData["DarkMode"]> </div>
+    </div>
+
+@*<div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <div asp-action="Dark">
+        <label class="btn btn-secondary active">
+            <input type="radio" name="Dark" id="option2" checked> Dark
+        </label>
+    </div>
+    <div asp-action="Standard">
+        <label class="btn btn-secondary">
+            <input type="radio" name="Standard" id="option1"> Standard
+        </label>
+    </div>
+</div>*@
+

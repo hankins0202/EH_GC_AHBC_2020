@@ -12,7 +12,7 @@ namespace Lab21_MovieRegistration.Controllers
 {
     public class MovieRegistrationController : Controller
     {
-        // GET: /<controller>/
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
