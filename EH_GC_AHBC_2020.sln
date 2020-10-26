@@ -101,6 +101,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W14D2_Middleware", "W14D2_M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab21_MovieRegistration", "Lab21_MovieRegistration\Lab21_MovieRegistration.csproj", "{598F2136-28D2-4137-A7AC-732A69F51120}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W15D2_MockAssessment5b", "W15D2_MockAssessment5b\W15D2_MockAssessment5b.csproj", "{866E328C-2A99-4341-898B-6ED20ABF64AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "W15D3_EFCore", "W15D3_EFCore\W15D3_EFCore.csproj", "{6749D75E-579D-4274-A138-A9B304EB80BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -267,6 +271,14 @@ Global
 		{598F2136-28D2-4137-A7AC-732A69F51120}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{598F2136-28D2-4137-A7AC-732A69F51120}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{598F2136-28D2-4137-A7AC-732A69F51120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866E328C-2A99-4341-898B-6ED20ABF64AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866E328C-2A99-4341-898B-6ED20ABF64AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866E328C-2A99-4341-898B-6ED20ABF64AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866E328C-2A99-4341-898B-6ED20ABF64AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6749D75E-579D-4274-A138-A9B304EB80BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6749D75E-579D-4274-A138-A9B304EB80BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6749D75E-579D-4274-A138-A9B304EB80BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6749D75E-579D-4274-A138-A9B304EB80BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
