@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MovieWebAppLabs_21222324.DataLayer.Context.Movies>
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<div class="text-center">
+    <h1>Movie Registration</h1>
+
+    @*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Genre)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Genre)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
