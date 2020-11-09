@@ -29,7 +29,7 @@ namespace MovieWebAppLabs_21222324.Areas.Identity.Data
         public MovieWebAppLabs_21222324IdentityDbContext CreateDbContext(string[] args)
         {
             var builder = new DbContextOptionsBuilder<MovieWebAppLabs_21222324IdentityDbContext>();
-            builder.UseSqlServer("Server=127.0.0.1;Database=MovieWebApp;User=sa;Password=AnExamplePassword1@");
+            builder.UseSqlServer("Server=127.0.0.1;Database=MovieWebApp;User=sa;Password=<AnExamplePassword@>");
             return new MovieWebAppLabs_21222324IdentityDbContext(builder.Options);
         }
     }

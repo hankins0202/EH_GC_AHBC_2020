@@ -4,12 +4,21 @@
     ViewData["Title"] = "Movies";
 }
 
+@using (@Html.BeginForm("MovieSearch", "Home", FormMethod.Post))
+{
+    <label for="Name" class="text-primary">Movie Title</label>
+    <input id="Name" name="Name" type="text" />
+
+    <input id="Search" type="submit" value="Search" />
+}
+
+
 <div class="text-center">
     <h1>Movie Registration</h1>
 
     @*<p>
-        <a asp-action="Create">Create New</a>
-    </p>*@
+            <a asp-action="Create">Create New</a>
+        </p>*@
     <table class="table">
         <thead>
             <tr>
@@ -19,21 +28,30 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Genre)
                 </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CheckedOut)
+                </th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Genre)
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CheckedOut)
+                </td>
+                <td>
+                    <button asp-action="CheckOut">Check Out</button>
+                </td>
+            </tr>
             }
         </tbody>
-    </table>
+    </table>,
 </div>

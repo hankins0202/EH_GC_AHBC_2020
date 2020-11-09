@@ -25,6 +25,9 @@ namespace MovieWebAppLabs_21222324.Migrations.ApplicationDB
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("CheckedOut")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Genre")
                         .HasColumnType("nvarchar(max)");
 
@@ -42,6 +45,7 @@ namespace MovieWebAppLabs_21222324.Migrations.ApplicationDB
                         new
                         {
                             ID = 1,
+                            CheckedOut = false,
                             Genre = "Anitmation",
                             Name = "The Little Mermaid",
                             Runtime = 1.54
@@ -49,6 +53,7 @@ namespace MovieWebAppLabs_21222324.Migrations.ApplicationDB
                         new
                         {
                             ID = 2,
+                            CheckedOut = false,
                             Genre = "Action",
                             Name = "Pirates of The Caribbean",
                             Runtime = 1.54
@@ -56,6 +61,7 @@ namespace MovieWebAppLabs_21222324.Migrations.ApplicationDB
                         new
                         {
                             ID = 3,
+                            CheckedOut = false,
                             Genre = "Romantic Comedy",
                             Name = "When Harry Met Sally",
                             Runtime = 1.54
@@ -63,6 +69,7 @@ namespace MovieWebAppLabs_21222324.Migrations.ApplicationDB
                         new
                         {
                             ID = 4,
+                            CheckedOut = false,
                             Genre = "Drama",
                             Name = "The Imitation Game",
                             Runtime = 1.54
@@ -70,6 +77,7 @@ namespace MovieWebAppLabs_21222324.Migrations.ApplicationDB
                         new
                         {
                             ID = 5,
+                            CheckedOut = false,
                             Genre = "Biopic",
                             Name = "Hidden Figures",
                             Runtime = 1.54

@@ -25,7 +25,6 @@
     <Folder Include="Views\MovieRegistration\" />
     <Folder Include="DataLayer\" />
     <Folder Include="DataLayer\Context\" />
-    <Folder Include="DataLayer\Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
 </Project>

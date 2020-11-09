@@ -30,7 +30,7 @@ namespace MovieWebAppLabs_21222324
             services.AddControllersWithViews();
             services.AddDbContext <MovieWebAppLabs_21222324IdentityDbContext>(options => options.UseSqlServer("Server=127.0.0.1;Database=MovieWebApp;User=sa;Password=AnExamplePassword1@"));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<MovieWebAppLabs_21222324IdentityDbContext>();            //Server = 127.0.0.1; Database = MovieWebApp; User = sa; Password = AnExamplePassword1@
-            services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer("Server=127.0.0.1;Database=MovieWebApp;User=sa;Password=AnExamplePassword1@"));
+            services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer("Server=127.0.0.1;Database=MovieWebApp;User=sa;Password=<AnExamplePassword@>"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

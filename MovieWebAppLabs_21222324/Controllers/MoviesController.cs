@@ -10,12 +10,12 @@ using MovieWebAppLabs_21222324.Models;
 
 namespace MovieWebAppLabs_21222324.Controllers
 {
-    public class MovieRegistrationController : Controller
+    public class MoviesController : Controller
     {
 
         private readonly ApplicationDBContext _context;
 
-        public MovieRegistrationController(ApplicationDBContext context)
+        public MoviesController(ApplicationDBContext context)
         {
             _context = context;
         }
@@ -29,15 +29,16 @@ namespace MovieWebAppLabs_21222324.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Result([Bind("Id, Name, Genre, Runtime")]MovieRegistrationViewModel model)
+        public async Task<IActionResult> Result([Bind("Id, Name, Genre, Runtime, CheckedOut")]MovieRegistrationViewModel model)
         {
             if(ModelState.IsValid)
             {
-                _context.Add(model.Movies);
+                _context.Add(model.Name);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(model);
         }
+
     }
 }

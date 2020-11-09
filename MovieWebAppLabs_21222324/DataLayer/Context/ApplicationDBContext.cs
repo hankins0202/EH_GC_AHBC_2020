@@ -15,11 +15,11 @@ namespace MovieWebAppLabs_21222324.DataLayer.Context
             {
                 i.HasKey(k => k.ID);
                 i.HasData(
-                    new Movies { ID = 1, Name = "The Little Mermaid", Genre = "Anitmation", Runtime = 1.54 },
-                    new Movies { ID = 2, Name = "Pirates of The Caribbean", Genre = "Action", Runtime = 1.54 },
-                    new Movies { ID = 3, Name = "When Harry Met Sally", Genre = "Romantic Comedy", Runtime = 1.54 },
-                    new Movies { ID = 4, Name = "The Imitation Game", Genre = "Drama", Runtime = 1.54 },
-                    new Movies { ID = 5, Name = "Hidden Figures", Genre = "Biopic", Runtime = 1.54 });
+                    new Movies { ID = 1, Name = "The Little Mermaid", Genre = "Anitmation", Runtime = 1.54, CheckedOut = false },
+                    new Movies { ID = 2, Name = "Pirates of The Caribbean", Genre = "Action", Runtime = 1.54, CheckedOut = false },
+                    new Movies { ID = 3, Name = "When Harry Met Sally", Genre = "Romantic Comedy", Runtime = 1.54, CheckedOut = false },
+                    new Movies { ID = 4, Name = "The Imitation Game", Genre = "Drama", Runtime = 1.54, CheckedOut = false },
+                    new Movies { ID = 5, Name = "Hidden Figures", Genre = "Biopic", Runtime = 1.54, CheckedOut = false });
         });
 
             base.OnModelCreating(modelBuilder);
