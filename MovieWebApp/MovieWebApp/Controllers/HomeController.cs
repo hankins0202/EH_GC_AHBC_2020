@@ -73,7 +73,7 @@ namespace MovieWebApp.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CheckOut(int id, [Bind("ID,Name,Genre,Runtime,CheckedOut")] Data.Movies movie)
+        public async Task<IActionResult> CheckOut(int id, [Bind("ID,Name,Genre,Runtime,UserCheckedOut,CheckedOut")] Data.Movies movie)
         {
             if (id != movie.ID)
             {
@@ -84,8 +84,17 @@ namespace MovieWebApp.Controllers
             {
                 try
                 {
+                    if(movie.CheckedOut == true)
+                    {
+                        movie.UserCheckedOut = HttpContext.User.Identity.Name;
+                    }
+                    else
+                    {
+                        movie.UserCheckedOut = "";
+                    }
                     _context.Update(movie);
                     await _context.SaveChangesAsync();
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {
