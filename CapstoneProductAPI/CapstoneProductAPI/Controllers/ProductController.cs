@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CapstoneProductAPI.APIContext;
 using CapstoneProductAPI.Models;
+using System.Net.Http;
 
 namespace CapstoneProductAPI.Controllers
 {
@@ -54,10 +55,39 @@ namespace CapstoneProductAPI.Controllers
 
             return products;
         }
+        // GET: api/Product/Discontinued/true
+        [HttpGet("Discontinued/{discontinued}")]
+        public async Task<ActionResult<List<Product>>> GetDiscontinuedProduct(bool discontinued)
+        {
+            var products = await _context.Products.Where(p => p.Discontinued == discontinued).ToListAsync();
+
+            if (products == null)
+            {
+                return NotFound();
+            }
+
+            return products;
+        }
+
+        // GET: api/Product/UnitPrice/maxPrice
+        // GET: api/Product/UnitPrice/18.000
+        [HttpGet("UnitPrice/{maxPrice}")]
+        public async Task<ActionResult<List<Product>>> GetProductByMaxiPrice(decimal maxPrice)
+        {
+            var products = await _context.Products.Where(p => p.UnitPrice < maxPrice).ToListAsync();
+
+            if (products == null)
+            {
+                return NotFound();
+            }
+
+            return products;
+        }
 
         // PUT: api/Product/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduct(int id, Product product)
         {

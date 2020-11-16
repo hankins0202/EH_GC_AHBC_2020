@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 
 #nullable disable
 
@@ -11,7 +12,7 @@ namespace CapstoneProductAPI.Models
         {
             OrderDetails = new HashSet<OrderDetail>();
         }
-
+        [BindProperty]
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public int? SupplierId { get; set; }
@@ -23,8 +24,10 @@ namespace CapstoneProductAPI.Models
         public short? ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
 
+        //Foriegn keys
         public virtual Category Category { get; set; }
         public virtual Supplier Supplier { get; set; }
+        //one to many
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

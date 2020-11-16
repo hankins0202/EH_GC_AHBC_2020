@@ -17,6 +17,7 @@ namespace CapstoneProductAPI.Models
         public string Description { get; set; }
         public byte[] Picture { get; set; }
 
+        //one to many relationship
         public virtual ICollection<Product> Products { get; set; }
     }
 }
