@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Donut 
+<form asp-controller="Home" asp-action="Search">
+    <label asp-for="Id" class="control-label">Search by ID</label>
+    <input asp-for="Id" class="form-control"/>
+    <input type="submit" value="Search" class="btn btn-outline-primary" />
+</form>

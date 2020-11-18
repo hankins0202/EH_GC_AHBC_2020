@@ -1,0 +1,19 @@
+﻿@model Donut
+
+<h2>Donut Details</h2>
+
+<h3>@Model.Name</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Model.Calories</h2>
+        @foreach (var extra in Model.Extras)
+        {
+            <h2>
+                @Html.DisplayFor(modelItem => extra)
+            </h2>
+        }
+        <img src="@Model.PhotoURL" width="400" height="400" alt="" />
+
+    </div>
+</div>
